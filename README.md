@@ -1,2 +1,36 @@
-# object-detection-ResNet50
-Fine tuning function-specific parameters in an object detection model, taking advantage of its region proposal capability by using a custom training loop to only update gradients on variables pertaining to classification
+# Few-shot object detection with fine-tuned ResNet50 
+
+**Using a custom training loop and selecting specific
+model parameters for training.**
+
+We took full advantage of the region proposal capabilities
+of this network to draw our bounding boxes, while minimally
+updating the weights pertinent for classification.
+
+#### Training
+
+```python
+
+@tf.function(jit_compile=True)
+def train_step(...):
+
+    # Select desired variables for training
+    trainable_variables = ...
+
+    with tf.GradientTape() as tape:
+
+
+        predictions = model.predict(images, shapes)
+
+        losses_dict = model.loss(predictions, shapes)
+
+        loss = ...
+
+
+    # Evaluate gradients, update relevant parameters only
+    gradients = tape.gradient(loss, trainable_variables)
+    optimizer.apply_gradients(zip(gradients, trainable_variables))
+
+```
+
+Training was relatively quick in a CoLab GPU runtime without XLA enabled.
