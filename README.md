@@ -1,6 +1,9 @@
 # Few-shot object detection with fine-tuned ResNet50 
 
-![:zombie:](img/zombie.gif)
+
+<div align="center">
+        <img src="img/zombie.gif" alt=":zombie:">
+</div>
 
 **Using a custom training loop and selecting specific
 model parameters for training.**
