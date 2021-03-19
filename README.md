@@ -1,6 +1,6 @@
 # Few-shot object detection with fine-tuned ResNet50 
 
-![Flatbush Zombies](images/zombie-anim.gif)
+![:zombie:](img/zombie.gif)
 
 **Using a custom training loop and selecting specific
 model parameters for training.**
