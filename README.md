@@ -1,6 +1,7 @@
 # Few-shot object detection with fine-tuned ResNet50 
 
 
+
 <div align="center">
         <img src="img/zombie.gif" alt=":zombie:">
 </div>
@@ -28,8 +29,6 @@ cd object-detection-ResNet50/
 
 python train.py
 python test.py
-echo "what fun!"
-sudo rm -rf /
 
 ```
 
